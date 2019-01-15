@@ -1,29 +1,8 @@
 
-class Calcolo: 
-      def __init__(self,gall, cons):
-
-          self.ora=gall/cons
-          self.ora=int(self.ora)
-    
-          self.min=gall%cons
-          cons=cons/60
-          self.min=self.min/cons
-          self.min=int(self.min)
-   
-          self.sec=gall%cons
-          cons=cons/60
-          self.sec=self.sec/cons
-          self.sec=int(self.sec)
-
-
-          print(self.ora, " h / ", self.min, " min / ", self.sec, " sec")
-
-
-
-
 
 gall=input("inserisci Galloni --->")
 gall=float(gall)
+
 
 if(gall < 0):
   print("-!-ERROR-!-")
@@ -34,4 +13,19 @@ else:
   if(cons < 0):  
     print("-!-ERROR-!-")
   else:
-    Calcolo(gall, cons)
+
+          ora=gall/cons
+          ora=int(ora)
+    
+          minu=gall%cons
+          cons=cons/60
+          minu=minu/cons
+          minu=int(minu)
+   
+          sec=gall%cons
+          cons=cons/60
+          sec=sec/cons
+          sec=int(sec)
+
+
+          print(ora, " h / ", minu, " min / ", sec, " sec")
